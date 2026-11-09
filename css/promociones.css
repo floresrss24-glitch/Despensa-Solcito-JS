@@ -1,0 +1,121 @@
+/* ==========================
+   PROMOCIONES
+========================== */
+.promo-container{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.promo-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    margin-bottom:40px;
+}
+
+.promo-header h2{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.promo-header img{
+    width:120px;
+}
+
+.promo-card{
+    background:#dcdcdc;
+    border-radius:6px;
+    padding:20px 40px;
+    margin-bottom:25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.promo-badge{
+    width:90px;
+    height:90px;
+    background:#ff1236;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    font-weight:bold;
+
+    clip-path: polygon(
+        50% 0%,
+        60% 10%,
+        75% 5%,
+        80% 20%,
+        95% 25%,
+        90% 40%,
+        100% 50%,
+        90% 60%,
+        95% 75%,
+        80% 80%,
+        75% 95%,
+        60% 90%,
+        50% 100%,
+        40% 90%,
+        25% 95%,
+        20% 80%,
+        5% 75%,
+        10% 60%,
+        0% 50%,
+        10% 40%,
+        5% 25%,
+        20% 20%,
+        25% 5%,
+        40% 10%
+    );
+}
+
+.promo-info{
+    flex:1;
+    margin-left:30px;
+}
+
+.promo-info h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.promo-info p{
+    font-size:18px;
+}
+
+.promo-btn{
+    background:#e34242;
+    color:white;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:4px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.promo-btn:hover{
+    background:#c62828;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .promo-header{
+        flex-direction:column;
+        gap:20px;
+    }
+    .promo-card{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+    .promo-info{
+        margin-left:0;
+    }
+}

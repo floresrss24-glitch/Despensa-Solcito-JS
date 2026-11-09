@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Solcito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+    
+<body>
+    <!-- HEADER PRINCIPAL -->
+    <header class="top-header">
+        <div class="logo">
+                <img src="img/marca/despensa-solcito.png" alt="Logo de la despensas">
+            <h1>Despensa Solcito</h1>
+        </div>
+
+        <!--Muestra la fecha actual o la hora en tiempo real (Date() y setInterval()).-->
+        <div class="dropdown-menu">
+            <!-- Botón que abre el menú -->
+            <button class="dropdown-toggle" id="perfilBoton"
+                    aria-expanded="false"
+                    aria-controls="perfilMenu"
+                    type="button">
+
+                <i class="fas fa-user-circle"></i>
+                <span>Mi perfil</span>
+                <i class="fas fa-chevron-down flecha"></i>
+            </button>
+
+            <!-- Contenido desplegable -->
+            <div class="dropdown-wrapper" id="perfilMenu" hidden>
+                <!-- Información del usuario -->
+                <div class="user-info">
+                    <img src="img/iconos/usuario.png" alt="Foto de perfil">
+                    <div>
+                        <h2>Tu nombre</h2>
+                        <p>Mi cuenta</p>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- Opciones del menú -->
+                <div class="menu-options">
+                    <a href="perfil.html">
+                        <img src="img/iconos/usuario.png" alt="Compras">
+                        <p>Mi perfil</p>
+                        <span></span>
+                    </a>
+                    <a href="compras.html">
+                        <img src="img/iconos/carrito.png" alt="Compras">
+                        <p>Mis compras</p>
+                        <span></span>
+                    </a>
+
+                    <a href="Favoritos.html">
+                        <img src="img/iconos/favoritos.png" alt="Productos favoritos">
+                        <p>Productos Favoritos</p>
+                        <span></span>
+                    </a>
+
+                    <a href="configuracion.html">
+                        <img src="img/iconos/config.png" alt="Configuración">
+                        <p>Configuración</p>
+                        <span></span>
+                    </a>
+
+                    <a href="ayuda.html">
+                        <img src="img/iconos/soporte.png" alt="Ayuda y soporte">
+                        <p>Ayuda y soporte</p>
+                        <span></span>
+                    </a>
+                    <a href="contactos.html">
+                        <img src="img/iconos/contacto.png" alt="Telefono">
+                        <p>Contacto</p>
+                        <span></span>
+                    </a>
+                    <hr>
+
+                    <a href="login.html" class="cerrar-sesion">
+                        <img src="img/iconos/sesion.png" alt="Inician cerrar-sesion">
+                        <p>Iniciar sesión</p>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="compras.html">Compras</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fecha y hora actual -->
+    <div class="fecha-hora">
+        <p id="fechaActual"></p>
+        <p id="horaActual"></p>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-image">
+            <img 
+                src="img/fotos/local.webp"
+                srcset="
+                    img/fotos/local.webp 400w,
+                    img/fotos/local.webp 800w,
+                    img/fotos/local.webp 1200w
+                "
+                sizes="(max-width: 600px) 100vw, 600px"
+                alt="Descripción de la imagen"
+                width="800"
+                height="450"
+                fetchpriority="high"
+            >
+        </div>
+
+        <div class="hero-content">
+            <h2>Bienvenido a la <br>Despensa Solcito</h2>
+            <p>
+                Encuentra todo lo que necesitas para tu hogar.
+                Los mejores productos de abarrotes, bebidas,
+                snacks y mucho más. Calidad garantizada y
+                precios accesibles para toda la familia.
+            </p>
+            <a href="producto.html" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="categorias">
+        <h2>Categorías</h2>
+        <div class="grid-categorias">
+            <div class="card">
+                <div class="icon bebida">🥤</div>
+                <h3>Bebidas</h3>
+                <p>Refrescos, jugos y más</p>
+                <span>$25.00</span>
+            </div>
+            <div class="card">
+                <div class="icon pan">🍞</div>
+                <h3>Panadería</h3>
+                <p>Pan fresco diario</p>
+                <span>$15.00</span>
+            </div>
+            <div class="card">
+                <div class="icon abarrotes">🥫</div>
+                <h3>Abarrotes</h3>
+                <p>Productos de despensa</p>
+                <span>$35.00</span>
+            </div>
+            <div class="card">
+                <div class="icon snacks">🍪</div>
+                <h3>Snacks</h3>
+                <p>Botanas y dulces</p>
+                <span>$20.00</span>
+            </div>
+            <div class="card">
+                <div class="icon lacteos">🧃</div>
+                <h3>Lácteos</h3>
+                <p>Leche, yogurt, queso</p>
+                <span>$30.00</span>
+            </div>
+            <div class="card">
+                <div class="icon pastas">🍝</div>
+                <h3>Pastas</h3>
+                <p>Variedad de pastas</p>
+                <span>$18.00</span>
+            </div>
+            <div class="card">
+                <div class="icon limpieza">🧽</div>
+                <h3>Limpieza</h3>
+                <p>Productos de limpieza</p>
+                <span>$45.00</span>
+            </div>
+            <div class="card">
+                <div class="icon congelados">❄️</div>
+                <h3>Congelados</h3>
+                <p>Productos congelados</p>
+                <span>$55.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Despensa Solcito</h3>
+                <p>
+                    Tu tienda de confianza para encontrar
+                    productos de calidad al mejor precio.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="producto.html">Productos</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="promociones.html">Ofertas</a></li>
+                    <li><a href="cv.html">Presenta tu CV para trabajar con nosotros</a></li>
+                    <li><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="curso.html">curso</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📍 Salta, Argentina</p>
+                <p>📞 +54 387 123-4567</p>
+                <p>✉ info@despensasolcito.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Despensa Solcito | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/funciones/tema.js"></script>
+    <script src="js/funciones/menus.js"></script>
+    <script src="js/funciones/fecha-hora.js"></script>
+    <script src="js/funciones/alerta.js"></script>
+    <script src="js/paginas/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f5;
+    color: #26352a;
+    transition: background .25s, color .25s;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #287b38;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marca i {
+    color: #f9a825;
+    font-size: 28px;
+}
+
+.volver {
+    color: #287b38;
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.titulo p,
+.panel p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.panel h2 {
+    font-size: 19px;
+    margin-bottom: 22px;
+}
+
+.panel h2 i {
+    color: #388e3c;
+    margin-right: 8px;
+}
+
+.panel > label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.panel > input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.panel > input:focus {
+    outline: 2px solid #388e3c;
+    border-color: #388e3c;
+}
+
+.opcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.opcion:last-child {
+    border-bottom: none;
+}
+
+.opcion strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.opcion p {
+    font-size: 14px;
+}
+
+.opcion input {
+    width: 19px;
+    height: 19px;
+    accent-color: #388e3c;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.aviso {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.enlace {
+    color: #287b38;
+    font-weight: bold;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    padding: 13px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.guardar {
+    background: #2e7d32;
+    color: white;
+    border: none;
+}
+
+.guardar:hover {
+    background: #1b5e20;
+}
+
+.restablecer {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+#mensaje {
+    margin-top: 18px;
+    color: #287b38;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #6b7280;
+}
+
+/* MODO OSCURO */
+body.modo-oscuro {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+body.modo-oscuro .encabezado,
+body.modo-oscuro .panel {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.modo-oscuro .panel p,
+body.modo-oscuro .titulo p {
+    color: #d1d5db;
+}
+
+body.modo-oscuro .panel > input {
+    background: #111827;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.modo-oscuro .opcion {
+    border-color: #374151;
+}
+
+body.modo-oscuro .restablecer {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 18px;
+    }
+
+    .marca {
+        font-size: 16px;
+    }
+
+    .contenedor {
+        margin: 30px auto;
+        padding: 0 14px;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
+
+body.modo-oscuro .marca,
+body.modo-oscuro .volver,
+body.modo-oscuro .enlace {
+    color: #81c784;
+}
+
+body.modo-oscuro .titulo h1,
+body.modo-oscuro .panel h2,
+body.modo-oscuro .opcion strong {
+    color: #f3f4f6;
+}
+

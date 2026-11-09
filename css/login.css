@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f7fff7);
+    color: #26352a;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor principal */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px;
+    position: relative;
+}
+
+/* Volver al inicio */
+.volver-inicio {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: #357a38;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.volver-inicio:hover {
+    color: #1b5e20;
+}
+
+/* Tarjeta del login */
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(35, 80, 40, 0.12);
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-icono {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f5e9;
+    color: #f9a825;
+    font-size: 32px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    color: #287b38;
+    margin-bottom: 8px;
+}
+
+.logo h1 span {
+    color: #f9a825;
+}
+
+.logo p {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* Título */
+.login-titulo {
+    margin-bottom: 25px;
+}
+
+.login-titulo h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.login-titulo p {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* Campos */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.input-icono {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    padding: 0 13px;
+    border: 1px solid #d9e2da;
+    border-radius: 9px;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-icono:focus-within {
+    border-color: #388e3c;
+    box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.12);
+}
+
+.input-icono > i {
+    color: #6b8b6e;
+}
+
+.input-icono input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #26352a;
+    font-size: 14px;
+}
+
+.input-icono input::placeholder {
+    color: #a0a8a1;
+}
+
+/* Mostrar contraseña */
+.mostrar-contrasena {
+    border: none;
+    background: transparent;
+    color: #718372;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Recordarme y recuperar contraseña */
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 25px;
+    font-size: 12px;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recordar input {
+    accent-color: #388e3c;
+}
+
+.opciones a {
+    color: #2e7d32;
+}
+
+.opciones a:hover {
+    text-decoration: underline;
+}
+
+/* Botón ingresar */
+.boton-login {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #2e7d32;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.boton-login i {
+    margin-left: 8px;
+}
+
+.boton-login:hover {
+    background: #1b5e20;
+    transform: translateY(-1px);
+}
+
+/* Mensaje */
+.mensaje {
+    margin-top: 14px;
+    color: #2e7d32;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* Mensajes de error debajo de los campos */
+.error-campo {
+    color: #d32f2f;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 6px;
+    min-height: 0;
+}
+
+/* Resaltar el campo que tiene un error */
+.campo:has(.error-campo:not(:empty)) .input-icono {
+    border-color: #d32f2f;
+}
+
+/* Separador */
+.separador {
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    margin: 28px 0 20px;
+    padding-top: 20px;
+}
+
+.separador span {
+    color: #777777;
+    font-size: 13px;
+}
+
+/* Botón de registro */
+.boton-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #388e3c;
+    border-radius: 9px;
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.boton-registro:hover {
+    background: #e8f5e9;
+}
+
+/* Pie de página */
+.pie-login {
+    margin-top: 25px;
+    color: #788478;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 75px 15px 25px;
+    }
+    .volver-inicio {
+        top: 25px;
+        left: 18px;
+    }
+    .login-card {
+        padding: 27px 22px;
+    }
+    .logo h1 {
+        font-size: 23px;
+    }
+    .opciones {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* MODO OSCURO */
+body.modo-oscuro {
+    background: #121212;
+    color: #eeeeee;
+}
+
+body.modo-oscuro .login-card {
+    background: #1e1e1e;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+body.modo-oscuro .login-titulo h2,
+body.modo-oscuro .campo label {
+    color: #f5f5f5;
+}
+
+body.modo-oscuro .logo p,
+body.modo-oscuro .login-titulo p,
+body.modo-oscuro .separador span,
+body.modo-oscuro .pie-login {
+    color: #c4c4c4;
+}
+
+body.modo-oscuro .logo-icono {
+    background: #2a2a2a;
+}
+
+body.modo-oscuro .input-icono {
+    background: #181818;
+    border-color: #555555;
+}
+
+body.modo-oscuro .input-icono input {
+    color: #eeeeee;
+}
+
+body.modo-oscuro .input-icono > i,
+body.modo-oscuro .mostrar-contrasena {
+    color: #aaaaaa;
+}
+
+body.modo-oscuro .separador {
+    border-top-color: #3b3b3b;
+}
+
+body.modo-oscuro .volver-inicio,
+body.modo-oscuro .boton-registro,
+body.modo-oscuro .mensaje {
+    color: #81c784;
+}
+
+body.modo-oscuro .boton-registro {
+    border-color: #81c784;
+}
+
+body.modo-oscuro .boton-registro:hover {
+    background: #2a2a2a;
+}
+
+body.modo-oscuro .error-campo {
+    color: #ff8a80;
+}

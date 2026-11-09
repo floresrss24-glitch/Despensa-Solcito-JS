@@ -1,0 +1,863 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+.top-header{
+    background:white;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img {
+    width:45px;
+    height:45px;
+}
+.logo h1{
+    font-size:20px;
+    color:#1c2434;
+}
+
+/* ENCABEZADO: LOGO A LA IZQUIERDA Y PERFIL A LA DERECHA */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* CONTENEDOR DEL MENU */
+.dropdown-menu {
+    position: relative;
+    margin-left: auto;
+}
+
+/* BOTON PRINCIPAL */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    color: #1c2434;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-toggle:hover {
+    background: #f5f5f5;
+    border-color: #FFD500;
+}
+
+.dropdown-toggle > .fa-user-circle {
+    font-size: 25px;
+    color: #2563eb;
+}
+
+.flecha {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.dropdown-toggle[aria-expanded="true"] .flecha {
+    transform: rotate(180deg);
+}
+
+/* CAJA DESPLEGABLE */
+.dropdown-wrapper {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 290px;
+
+    padding: 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown-wrapper[hidden] {
+    display: none;
+}
+
+/* INFORMACION DEL USUARIO */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 2px 15px;
+}
+
+.user-info img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #FFD500;
+}
+
+.user-info h2 {
+    font-size: 16px;
+    color: #1c2434;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* LINEAS DIVISORIAS */
+.dropdown-wrapper hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 5px 0 10px;
+}
+
+/* OPCIONES */
+.menu-options a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 10px;
+    border-radius: 8px;
+
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+/*
+https://www.youtube.com/watch?v=yrPInhwTIM8*/
+
+.menu-options a:hover {
+    background: #fff7cc;
+}
+
+.menu-options a > img {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.menu-options a p {
+    flex: 1;
+    font-size: 14px;
+}
+
+.menu-options .flecha-opcion {
+    font-size: 12px;
+    color: #999;
+}
+
+.menu-options a.cerrar-sesion {
+    color: #2563eb;
+}
+
+/* ADAPTACION A CELULARES */
+@media (max-width: 480px) {
+    .top-header {
+        padding: 14px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .dropdown-toggle {
+        padding: 9px;
+    }
+
+    .dropdown-toggle span {
+        display: none;
+    }
+
+    .dropdown-wrapper {
+        width: min(290px, calc(100vw - 28px));
+    }
+}
+
+
+/* MENÚ */
+.navbar{
+    background:#ececec;
+    padding:15px 30px;
+}
+.navbar ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+.navbar a{
+    text-decoration:none;
+    color:#333;
+    transition:.3s;
+}
+.navbar a:hover{
+    color:#2563eb;
+}
+
+/* HERO */
+.hero{
+    max-width:1200px;
+    margin:50px auto;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    padding:0 20px;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+.hero-content{
+    flex:1;
+}
+.hero-content h2{
+    font-size:58px;
+    color:#111827;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+.hero-content p{
+    font-size:24px;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:bold;
+}
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* CATEGORÍAS */
+.categorias{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+.categorias h2{
+    margin-bottom:25px;
+    color:#1c2434;
+}
+.grid-categorias{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    transition:.3s;
+
+    text-decoration:none;
+    color:inherit;
+    display:block;
+    cursor:pointer;
+}
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    border-color:#2563eb;
+}
+
+/* IMÁGENES */
+.images{
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.images img{
+    max-width:90px;
+    max-height:90px;
+    object-fit:contain;
+}
+
+/* ICONOS */
+.icon{
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+}
+.bebida{
+    background:#f6dede;
+}
+.pan{
+    background:#dce7f7;
+}
+.abarrotes{
+    background:#dff2e4;
+}
+.snacks{
+    background:#f4efbc;
+}
+.lacteos{
+    background:#e8ddf5;
+}
+.pastas{
+    background:#f5e8c9;
+}
+.limpieza{
+    background:#f4dce9;
+}
+.congelados{
+    background:#d7f4ef;
+}
+.card h3{
+    padding:15px 15px 5px;
+}
+.card p{
+    padding:0 15px;
+    color:#666;
+    margin-bottom:10px;
+}
+.card span{
+    display:block;
+    padding:0 15px 15px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-content h2{
+        font-size:40px;
+    }
+    .hero-content p{
+        font-size:18px;
+    }
+    .navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+/* FOOTER */
+.footer{
+    background:#1c2434;
+    color:white;
+    margin-top:60px;
+}
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+.footer-section h3{
+    margin-bottom:15px;
+    color:#FFD500;
+}
+.footer-section p{
+    line-height:1.8;
+    color:#d1d5db;
+}
+.footer-section ul{
+    list-style:none;
+}
+.footer-section ul li{
+    margin-bottom:10px;
+}
+.footer-section ul li a{
+    text-decoration:none;
+    color:#d1d5db;
+    transition:.3s;
+}
+.footer-section ul li a:hover{
+    color:#FFD500;
+}
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+.social-icons a{
+    width:40px;
+    height:40px;
+    background:#2d3748;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    transition:.3s;
+}
+.social-icons a:hover{
+    background:#FFD500;
+    color:#000;
+}
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#cbd5e1;
+}
+
+
+/* ===== COMPONENTES COMPARTIDOS ===== */
+
+/* Enlace de la página actual en el menú */
+.navbar a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Mensajes de error de los formularios (funciones/validaciones.js) */
+.mensaje-error {
+    display: block;
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.mensaje-error:empty {
+    display: none;
+}
+
+/* Mensaje de estado debajo de un formulario */
+.mensaje-estado {
+    color: #2e7d32;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Resumen del pedido (funciones/resumen-formulario.js) */
+.resumen {
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+}
+
+.resumen h3 {
+    margin-bottom: 15px;
+    color: #1c2434;
+}
+
+.resumen dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 20px;
+}
+
+.resumen dt {
+    font-weight: bold;
+}
+
+.resumen-aviso {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Galería de imágenes (funciones/galeria.js) */
+[data-galeria] img {
+    cursor: zoom-in;
+}
+
+.visor {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, .85);
+}
+
+.visor[hidden] {
+    display: none;
+}
+
+.visor-figura {
+    max-width: min(80vw, 700px);
+    text-align: center;
+    color: #fff;
+}
+
+.visor-figura img {
+    max-width: 100%;
+    max-height: 75vh;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.visor-figura figcaption {
+    margin-top: 10px;
+}
+
+.visor button {
+    border: none;
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+    font-size: 24px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.visor button:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+.visor-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* Fecha y hora*/
+.fecha-hora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 10px 18px;
+    margin: 10px auto;
+
+    background-color: #f5f5f5;
+    color: #333;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    width: fit-content;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fecha-hora p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+#fechaActual {
+    color: #555;
+}
+
+#horaActual {
+    color: #2e7d32;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   MODO OSCURO
+   Va al final del archivo para ganarle a los estilos claros.
+   Colores: fondo #121212, tarjetas #1e1e1e, bordes #3b3b3b,
+   texto #eeeeee, texto secundario #c4c4c4, azul claro #8ab4ff,
+   amarillo #ffd45c.
+   ========================================================== */
+
+body {
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.modo-oscuro {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+/* Encabezado, navegación y pie de página */
+body.modo-oscuro .top-header,
+body.modo-oscuro .navbar,
+body.modo-oscuro .footer {
+    background-color: #1b1b1b;
+    color: #eeeeee;
+    border-color: #3b3b3b;
+}
+
+/* Títulos que en modo claro son azul oscuro */
+body.modo-oscuro .logo h1,
+body.modo-oscuro .hero-content h2,
+body.modo-oscuro .categorias h2,
+body.modo-oscuro .blog-header h1,
+body.modo-oscuro .blog-content h2,
+body.modo-oscuro .compras-header h2,
+body.modo-oscuro .contact-header h1,
+body.modo-oscuro .contact-info h2,
+body.modo-oscuro .contact-form h2,
+body.modo-oscuro .info-item h3,
+body.modo-oscuro .curso-header h1,
+body.modo-oscuro .tema h3,
+body.modo-oscuro .timeline h3,
+body.modo-oscuro .cv-header h1,
+body.modo-oscuro .faq-header h1,
+body.modo-oscuro .about-header h1,
+body.modo-oscuro .about-content h2,
+body.modo-oscuro .valores h2,
+body.modo-oscuro .valor-card h3,
+body.modo-oscuro .resumen h3,
+body.modo-oscuro .user-info h2 {
+    color: #f5f5f5;
+}
+
+/* Textos grises */
+body.modo-oscuro .hero-content p,
+body.modo-oscuro .card p,
+body.modo-oscuro .blog-header p,
+body.modo-oscuro .blog-content p,
+body.modo-oscuro .compras-header p,
+body.modo-oscuro .contact-header p,
+body.modo-oscuro .info-item p,
+body.modo-oscuro .curso-header p,
+body.modo-oscuro .tema p,
+body.modo-oscuro .cv-header p,
+body.modo-oscuro .cv-section li,
+body.modo-oscuro .timeline span,
+body.modo-oscuro .timeline p,
+body.modo-oscuro .cv-section p,
+body.modo-oscuro .faq-header p,
+body.modo-oscuro .faq-item p,
+body.modo-oscuro .about-header p,
+body.modo-oscuro .about-content p,
+body.modo-oscuro .valor-card p,
+body.modo-oscuro .form-group small,
+body.modo-oscuro .checkbox-group label,
+body.modo-oscuro .resumen-aviso,
+body.modo-oscuro .user-info p,
+body.modo-oscuro .menu-options .flecha-opcion {
+    color: #c4c4c4;
+}
+
+/* Títulos y detalles en azul: se aclaran para que se lean */
+body.modo-oscuro .tema h2,
+body.modo-oscuro .cv-section h2,
+body.modo-oscuro .faq-item h2,
+body.modo-oscuro .info-item i,
+body.modo-oscuro .card span {
+    color: #8ab4ff;
+}
+
+/* Tarjetas y paneles */
+body.modo-oscuro .card,
+body.modo-oscuro .blog-card,
+body.modo-oscuro .pedido-card,
+body.modo-oscuro .contact-info,
+body.modo-oscuro .contact-form,
+body.modo-oscuro .tema,
+body.modo-oscuro .cv-container,
+body.modo-oscuro .faq-item,
+body.modo-oscuro .valor-card,
+body.modo-oscuro .resumen,
+body.modo-oscuro .promo-card {
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    border-color: #3b3b3b;
+}
+
+body.modo-oscuro .card:hover {
+    border-color: #8ab4ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.modo-oscuro .timeline,
+body.modo-oscuro .tema pre {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+}
+
+/* Campos de formulario */
+body.modo-oscuro input,
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+    background-color: #181818;
+    color: #eeeeee;
+    border-color: #555555;
+}
+
+body.modo-oscuro input::placeholder,
+body.modo-oscuro textarea::placeholder {
+    color: #aaaaaa;
+}
+
+body.modo-oscuro fieldset {
+    border-color: #3b3b3b;
+}
+
+body.modo-oscuro legend,
+body.modo-oscuro .form-label,
+body.modo-oscuro .form-group label,
+body.modo-oscuro .radio-group label {
+    color: #dddddd;
+}
+
+body.modo-oscuro .btn-reset {
+    background-color: #2a2a2a;
+    color: #eeeeee;
+    border: 1px solid #555555;
+}
+
+body.modo-oscuro .btn-reset:hover {
+    background-color: #3a3a3a;
+}
+
+/* Enlaces */
+body.modo-oscuro a {
+    color: #ffd45c;
+}
+
+body.modo-oscuro a:hover {
+    color: #ffe89a;
+}
+
+body.modo-oscuro a.card {
+    color: #eeeeee;
+}
+
+/* Botones y etiquetas de color: el texto siempre blanco */
+body.modo-oscuro .btn,
+body.modo-oscuro .blog-btn,
+body.modo-oscuro .promo-btn,
+body.modo-oscuro .promo-badge,
+body.modo-oscuro .btn-enviar,
+body.modo-oscuro .social-contact a,
+body.modo-oscuro .skills span,
+body.modo-oscuro .contact-form button {
+    color: #ffffff;
+}
+
+body.modo-oscuro .social-icons a {
+    color: #ffffff;
+}
+
+body.modo-oscuro .social-icons a:hover {
+    color: #000000;
+}
+
+/* Menú de perfil */
+body.modo-oscuro .dropdown-toggle {
+    background-color: #242424;
+    color: #eeeeee;
+    border-color: #555555;
+}
+
+body.modo-oscuro .dropdown-toggle:hover {
+    background-color: #333333;
+    border-color: #ffd45c;
+}
+
+body.modo-oscuro .dropdown-toggle > .fa-user-circle {
+    color: #8ab4ff;
+}
+
+body.modo-oscuro .dropdown-wrapper {
+    background-color: #1e1e1e;
+    border-color: #3b3b3b;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+body.modo-oscuro .dropdown-wrapper hr {
+    border-top-color: #3b3b3b;
+}
+
+body.modo-oscuro .menu-options {
+    background-color: transparent;
+}
+
+body.modo-oscuro .menu-options a {
+    color: #eeeeee;
+}
+
+body.modo-oscuro .menu-options a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.modo-oscuro .menu-options a.cerrar-sesion {
+    color: #8ab4ff;
+}
+
+body.modo-oscuro .menu-options a.cerrar-sesion:hover {
+    color: #b3cdff;
+}
+
+/* Los íconos oscuros se apoyan en un fondo claro para verse */
+body.modo-oscuro .menu-options a > img {
+    box-sizing: content-box;
+    padding: 3px;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+/* Fecha y hora */
+body.modo-oscuro .fecha-hora {
+    background-color: #242424;
+    border-color: #3b3b3b;
+}
+
+body.modo-oscuro #fechaActual {
+    color: #bbbbbb;
+}
+
+body.modo-oscuro #horaActual {
+    color: #66bb6a;
+}
+
+/* Mensajes de formularios */
+body.modo-oscuro .mensaje-error {
+    color: #ff8a80;
+}
+
+body.modo-oscuro .mensaje-estado {
+    color: #81c784;
+}
+
+/* Separadores */
+body.modo-oscuro hr {
+    border-color: #444444;
+}

@@ -1,0 +1,187 @@
+.compras {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+.compras-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.compras-header h2 {
+    font-size: 40px;
+    color: #1c2434;
+    margin-bottom: 10px;
+}
+
+.compras-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+.pedido-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+fieldset {
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+legend {
+    padding: 0 8px;
+    color: #374151;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label,
+.form-label {
+    display: block;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,.1);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group select:invalid,
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+.form-group input:valid,
+.form-group select:valid,
+.form-group textarea:valid {
+    border-color: #22c55e;
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+input[type="file"] {
+    padding: 8px;
+}
+
+.form-group small {
+    display: block;
+    color: #888;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    font-size: 13px;
+    color: #555;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-enviar,
+.btn-reset {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-enviar {
+    flex: 1;
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-enviar:hover {
+    background: #1d4ed8;
+}
+
+.btn-reset {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.btn-reset:hover {
+    background: #f3f4f6;
+}
+
+@media (max-width: 600px) {
+    .compras {
+        padding: 40px 15px;
+    }
+
+    .compras-header h2 {
+        font-size: 32px;
+    }
+
+    .pedido-card {
+        padding: 20px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

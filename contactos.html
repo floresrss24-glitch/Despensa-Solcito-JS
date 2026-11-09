@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Solcito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contactos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER PRINCIPAL -->
+    <header class="top-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-sun"></i>
+            </div>
+            <h1>Despensa Solcito</h1>
+        </div>
+    </header>
+
+    <!-- MENÚ -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="compras.html">Compras</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTACTO -->
+    <section class="contact-header">
+        <h1>Contáctanos</h1>
+        <p>Estamos para ayudarte. Comunícate con nosotros cuando lo necesites.</p>
+    </section>
+
+    <section class="contact-container">
+
+        <!-- INFORMACIÓN -->
+        <div class="contact-info">
+
+            <h2>Información de Contacto</h2>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Dirección</h3>
+                    <p>Av. Principal 123, Salta, Argentina</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Teléfono</h3>
+                    <p>+54 387 123 4567</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email</h3>
+                    <p>contacto@despensasolcito.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3>Horario</h3>
+                    <p>Lunes a Sábado: 08:00 - 22:00</p>
+                </div>
+            </div>
+
+            <div class="social-contact">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contact-form">
+
+            <h2>Envíanos un mensaje</h2>
+
+            <form id="formContacto" data-validar>
+
+                <div class="campo">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
+                </div>
+
+                <div class="campo">
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" aria-label="Correo electrónico" required>
+                </div>
+
+                <div class="campo">
+                    <input type="text" id="asunto" name="asunto" placeholder="Asunto" aria-label="Asunto">
+                </div>
+
+                <div class="campo">
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje" aria-label="Mensaje" required></textarea>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+
+                <p id="mensajeContacto" class="mensaje-estado" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="js/funciones/tema.js"></script>
+    <script src="js/funciones/menus.js"></script>
+    <script src="js/funciones/validaciones.js"></script>
+    <script src="js/paginas/contactos.js"></script>
+</body>
